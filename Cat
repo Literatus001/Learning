@@ -1,0 +1,143 @@
+public class Cat
+{
+
+    public static final int EyesCount = 2;
+
+
+
+     double originWeight;
+    private double weight;
+
+    private double minWeight;
+    private double maxWeight;
+    private double Famount;
+    private double Damount;
+
+    private static int count = 0;
+
+    public String getStatus() {
+        this.count = count;
+
+        if (weight <= minWeight) {
+            this.count = count;
+            count = count - 1;
+            return "Dead";
+        } else if (weight >= maxWeight) {
+            this.count = count;
+            count = count - 1;
+            return "Exploded";
+        } else if (weight > originWeight) {
+            this.count = count;
+            count = count - 1;
+            return "Sleeping";
+        } else {
+            return "Playing";
+        }
+    }
+
+
+    public boolean CompDead = CompDead1();
+
+
+
+    public boolean CompDead1()
+        {
+        boolean CompDead;
+        if (weight <= minWeight)
+        {
+            CompDead = true;
+        }
+        else
+        {
+            CompDead = false;
+        }
+
+        return CompDead;
+
+    }
+    public void getLife()
+    {
+     if (CompDead == true)
+         System.out.println("CompDead = true");
+     else
+     {
+         System.out.println("CompDead = false");
+     }
+    }
+    public double eaten()
+    {
+        double amount = Famount + Damount;
+        double weight1 = weight;
+        double eaten = (amount);
+        return eaten;
+    }
+    public Cat()
+    {
+        weight = 3000.0;
+        originWeight = weight;
+        final double minWeight = 1000.0;
+        final double maxWeight = 7000.0;
+        this.minWeight = minWeight;
+        this.maxWeight = maxWeight;
+    }
+
+    public Cat(double weight)
+    {
+    this ();
+    this.weight = weight;
+    }
+
+    {
+        count +=1;
+    }
+
+    public void meow()
+    {
+        weight = weight - 1;
+        System.out.println("Meow");
+    }
+
+    public double getEaten()
+    {
+        return eaten();
+    }
+
+    public Double getWeight()
+    {
+        return weight;
+    }
+
+    public static int getCount()
+    {
+    return count;
+    }
+
+
+
+
+    public void pi ()
+    {if(CompDead==true)
+        {System.out.println("Cat dead"); }
+        else if(!(CompDead==true))
+        {
+            weight = weight - (eaten() / 2);
+            System.out.println("Meowww ");
+        }
+    }
+        public void feed(Double Famount)
+        {
+            if(CompDead==true)
+            { System.out.println("Cat dead"); }
+            else if(!(CompDead==true))
+            {weight = weight + Famount;
+                this.Famount = Famount;}
+        }
+
+        public void drink(Double Damount)
+        {if(CompDead==true)
+            {System.out.println("Cat dead"); }
+            else if(!(CompDead==true))
+            {weight = weight + Damount;
+                this.Damount = Damount;}
+        }
+    }
