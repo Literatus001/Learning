@@ -1,0 +1,6 @@
+public enum PaintType
+{
+    WHITE,
+    BLACK,
+    BLACK_and_WHITE
+}
