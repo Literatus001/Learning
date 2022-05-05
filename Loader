@@ -1,0 +1,11 @@
+public class Loader
+{
+    private static Cat getKitten(double weight)
+    {
+     Cat kitten = new Cat(weight);
+    return kitten;
+    }
+
+    public static void main(String[] args)
+    {
+        Cat cat = new Cat();
